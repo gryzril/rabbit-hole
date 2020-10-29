@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 #Search Query User Input
 query = input("Enter Word to Search")
-query = query.replace(' ', '+')       # Google expects query to be in parameters of URL and have spaces repaced with '+'
+query = query.replace(' ', '+')       # Google expects query to be in parameters of URL and have spaces replaced with '+'
 URL = f"https://google.com/search?q={query}"
 
 # desktop user-agent -- I use Firefox 82.0.1 I guess
