@@ -1,1 +1,6 @@
-print("This is a test")
+from bs4 import BeautifulSoup
+import requests
+
+page = requests.get("http://google.com")
+soup = BeautifulSoup(page.content, 'html.parser')
+print(soup.prettify())
