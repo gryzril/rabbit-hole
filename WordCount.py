@@ -19,7 +19,7 @@ def text_from_html(body):
     visible_texts = filter(tag_visible, texts)
     return u" ".join(t.strip() for t in visible_texts)
 
-
+  
 def print_common_words(text):
     commonWords = []
     for i in text:
@@ -33,8 +33,7 @@ def print_common_words(text):
         print('no words used 5 or more times')
 
 
-html = urllib.request.urlopen('https://en.wikipedia.org/wiki/StarCraft').read()
-text = text_from_html(html).split()
-print_common_words(text)
-
-
+def list_popular_words(website):
+    html = urllib.request.urlopen(website).read()
+    text = text_from_html(html).split()
+    print_common_words(text)
