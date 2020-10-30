@@ -19,15 +19,15 @@ def text_from_html(body):
     visible_texts = filter(tag_visible, texts)
     return u" ".join(t.strip() for t in visible_texts)
 
-
-def common_word(text):
-    common_words = []
+  
+def print_common_words(text):
+    commonWords = []
     for i in text:
-        if text.count(i) >= 20 and common_words.count(i) == 0:
-            common_words.append(i)
-    if len(common_words) > 0:
+        if text.count(i) >= 20 and commonWords.count(i) == 0:
+            commonWords.append(i)
+    if len(commonWords) > 0:
         print('The common words are:')
-        for i in common_words:
+        for i in commonWords:
             print(i)
     else:
         print('no words used 5 or more times')
@@ -36,4 +36,4 @@ def common_word(text):
 def list_popular_words(website):
     html = urllib.request.urlopen(website).read()
     text = text_from_html(html).split()
-    common_word(text)
+    print_common_words(text)
