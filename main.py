@@ -1,6 +1,9 @@
 import WordCount
+import user_input
 
-url = 'https://en.wikipedia.org/wiki/Bear'
+neededInput = 'Please Enter URL:\n'
 
-words = WordCount.list_popular_words(url)
+text = user_input.get_user_input(neededInput)
+
+words = WordCount.list_popular_words(text)
 print(words)
