@@ -1,1 +1,2 @@
-# rabbit-hole Use Python Library Beautiful Soup to parse webpages. Uses Google Search Engine to generate a wordmap based on an inputted string.
+# rabbit-hole 
+Uses Google Search Engine and Beautiful Soup to generate a wordmap based on an inputted string.
